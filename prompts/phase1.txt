@@ -1,0 +1,30 @@
+Spender Project: Phase 1 Work History
+1. Project Configuration and Architecture
+Objective: To create a basic FastAPI application with a 3-tier (presentation, logic, data) architecture before security hardening.
+
+Technology Stack: Python, FastAPI, SQLAlchemy, SQLite, Uvicorn.
+
+Directory Structure: app/ (code), prompts/phase1/ (logs), README.md, requirements.txt.
+
+2. Technical Interventions and Solutions
+Virtual Environment Issue: The .venv directory was not recognized; .\.venv\Scripts\activate and ExecutionPolicy settings were configured.
+
+Import Errors: The ImportError: attempted relative import error was resolved by running the uvicorn app.main:app command from the project's root directory (D:\pycharm\Spender) and adding the __init__.py files.
+
+Database Integration: The get_db generator function was added to the database.py file, and schema creation was automated with models.Base.metadata.create_all.
+
+Modernization: Lifespan event management was integrated to resolve the FastAPI on_event("startup") warning.
+
+3. Endpoint and Presentation Features
+Endpoints: register, login, create_expense, read_expense, update_expense, delete_expense, and admin/users.
+
+User Experience: * Lifespan logging that pushes a documentation link to the terminal upon application startup.
+
+HTMLResponse design providing a clickable link to Swagger documentation for the root directory (/).
+
+4. Git and GitHub Synchronization
+Commit Message: Initial commit: baseline application before security hardening
+
+Requirements Management: Dependencies were locked with the pip freeze > requirements.txt command.
+
+Push: Successfully pushed to the entire project main branch.
